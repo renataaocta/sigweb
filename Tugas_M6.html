@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Web Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        header { background: rgba(195, 113, 37, 0.772); color: white; padding: 10px; }
+        #map {
+            width : 1900px; 
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Peta Persebaran Tempat Wisata Yogyakarta</h1>
+    </header>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map',{
+            center: [-7.79558, 110.36949],
+            zoom: 12
+        });
+        L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png',{
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var marker = L.marker([-7.80989, 110.35898], {
+            draggable: true,
+            title: "Hover Text"
+        }).addTo(map).bindPopup('<h1>Taman Sari</h1><p>Taman ini dibangun oleh Sultan Hamengku Buwono I pada tahun 1757 dengan gaya arsitektur campuran Jawa dan Postugis. Pada mulanya Taman Sari adalah taman air yang indah dan menawan.</p><img src = "https://asset.kompas.com/crops/Y5S_hd-Jn2cuaKYtOfN4ASXnM2Y=/0x0:1000x667/1200x800/data/photo/2022/03/13/622e12c85befb.jpg" style="width:180px">')
+        var marker = L.marker([-7.800349, 110.366073]).bindPopup('<h1>Museum Vredeburg</h1><p>Benteng Vredeburg merupakan salah satu saksi bisu peristiwa bersejarah yang terjadi di Yogyakarta sejak masa pemerintah kolonial Belanda.</p><img src = "https://kebudayaan.jogjakota.go.id/assets/instansi/kebudayaan/gallery/page_20210729_061443.png" style="width:180px">').addTo(map);
+        var marker = L.marker([-7.811574, 110.363349]).bindPopup('<h1>Alun-Alun Kidul</h1><p>Tempat ini berada di belakang Keraton Yogyakarta yang berfungsi sebagai tempat latihan prajurit dan pemeriksaan pasukan.</p><img src = "https://cyclink.id/wp-content/uploads/2023/11/alun-alun-kidul.png" style="width:180px">').addTo(map);
+        var marker = L.marker([-7.806801, 110.364031]).bindPopup('<h1>Keraton Yogyakarta</h1><p>Keraton Yogyakarta didirikan oleh Sri Sultan Hamengkubuwono I beberapa bulan pasca perjanjian Giyanti tahun 1755. Lokoasi ini konon bekas sebuah pesanggrahan yang bernama Garjitawati</p><img src = "https://kebudayaan.jogjakota.go.id/assets/instansi/kebudayaan/gallery/page_20210805_064132.jpg" style="width:180px">').addTo(map);
+        var marker = L.marker([-7.804112, 110.397656]).bindPopup('<h1>Kebun Binatang Gembira Loka</h1><p>Ide awal pembangunan ini dari keinginan Sri Sultan Hamengkubuwono VIII pada tahun 1933 yang kemudian dinamakan Kebun Rojo.</p><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_vCxoJAPrTNqM9HnRW90i8VurB7N-AO_duA&s" style="width:180px">').addTo(map);
+        var marker = L.marker([-7.793381, 110.365736]).bindPopup('<h1>Malioboro Yogyakarta</h1><p>Maliooro merupakan kawasan jalan dan pusat wisata belanja ikonik di Yogyakarta yang membentang dari Tugu hingga perempatan Kantor Pos.</p><img src = "https://terasmalioboro.jogjaprov.go.id/wp-content/uploads/2022/08/5ee208425be9b.jpg" style="width:180px">').addTo(map);
+        var marker = L.marker([-7.751900, 110.491313]).bindPopup('<h1>Candi Prambanan</h1><p>Candi Prambanan merupakan candi Hindu terbesar di Indonesia yang diabngun sejak abad ke-9 oleh raja dari Wangsa Sanjaya.</p><img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAhQtav2aTDYEJcEIwWmd1fTThSFirjQyyMQ&s" style="width:180px">').addTo(map);
+        var marker = L.marker([-7.607427, 110.203736]).bindPopup('<h1>Candi Borobudur</h1><p>Candi Borobudur merupakan sebuah candi Buddha yang dibangun sekitar abad ke-9 Masehi. Candi ini merupakan salah satu keajaiban arsitektur dan kepercayaan agama Buddha di Asia Tenggara</p><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJt7aIEVBl9NnP8AGYAfw7sXjxB9Uwi6xVeQ&s" style="width:180px">').addTo(map);
+    </script>
+</body>
+</html>
